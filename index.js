@@ -5,9 +5,7 @@ const port =process.env.PORT || 5000;
 app.get('/', (req, res) => {
   res.send('chef recipe hunter server side is running')
 })
-app.get('/alldata', (req, res) => {
-  res.send('hello');
-})
+
 
 app.listen(port, () => {
   console.log(`chef recipe hunter server side is running on port ${port}`)

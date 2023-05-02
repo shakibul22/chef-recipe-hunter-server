@@ -1,0 +1,24 @@
+[
+    {
+      "chefPicture": "https://example.com/chef1.jpg",
+      "chefName": "John Smith",
+      "yearsOfExperience": "10",
+      "numberOfRecipes": "50",
+      "likes": "500"
+    },
+    {
+      "chefPicture": "https://example.com/chef2.jpg",
+      "chefName": "Jane Doe",
+      "yearsOfExperience": "8",
+      "numberOfRecipes": "30",
+      "likes": "300"
+    },
+    {
+      "chefPicture": "https://example.com/chef3.jpg",
+      "chefName": "Bob Johnson",
+      "yearsOfExperience": "5",
+      "numberOfRecipes": "20",
+      "likes": "200"
+    }
+  ]
+  
