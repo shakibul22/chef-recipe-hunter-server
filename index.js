@@ -1,24 +1,24 @@
-const express = require('express')
-const cors=require("cors");
-
+const express = require("express");
 const app = express();
+var cors = require("cors");
 app.use(cors());
-const port =process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
+const chef = require("./chef.json");
 
-const detailsData=require("./data.json");
-const details=require("./details.json");
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 
-app.get('/', (req, res) => {
-  res.json('chef recipe hunter server side is running')
-})
-app.get('/allData', (req, res) => {
-  res.send(detailsData);
-})
-app.get('/details', (req, res) => {
-  res.send(details);
-})
-
+app.get("/chef", (req, res) => {
+  res.send(chef);
+});
+app.get("/chef/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  console.log(id);
+  const selectedChef = chef.find(n => parseInt(n.id) === id);
+  res.send(selectedChef);
+});
 
 app.listen(port, () => {
-  console.log(`chef recipe hunter server side is running on port  ${port}`)
-})
+  console.log(`chef recipe hunter server side is running on port ${port}`);
+});
